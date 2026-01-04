@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+
+<style>
+
+/* 🌈 Animated Moving Background */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff00ff, #000, #5500ff, #000);
+    background-size: 400% 400%;
+    animation: moveBG 10s infinite linear;
+    color: #ff00e6;
+    font-family: Arial;
+    text-align: center;
+}
+
+@keyframes moveBG {
+    0% { background-position: 0 0; }
+    50% { background-position: 200% 200%; }
+    100% { background-position: 0 0; }
+}
+
+/* LOGIN BOX */
+.box {
+    margin: 120px auto;
+    width: 320px;
+    padding: 25px;
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0 0 25px #ff00ff;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    animation: popUp 1s ease forwards;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* INPUTS */
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    background: #1a001a;
+    color: #ff7cff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+/* BUTTON */
+button {
+    background: #ff00ff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff74ff;
+    transform: scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+<div class="box">
+<h2>Login</h2>
+
+<form action="/details">
+    <input type="text" placeholder="Username" required>
+    <input type="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+</form>
+
+</div>
+</body>
+</html>

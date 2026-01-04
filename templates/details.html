@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Details</title>
+
+<style>
+
+/* 🌈 Animated Background */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff00ff, #000, #4400ff, #000);
+    background-size: 400% 400%;
+    animation: moveBG 10s infinite linear;
+    color: #ff00ff;
+    font-family: Arial;
+    text-align: center;
+}
+
+@keyframes moveBG {
+    0% { background-position: 0 0; }
+    50% { background-position: 200% 200%; }
+    100% { background-position: 0 0; }
+}
+
+/* MAIN BOX */
+.box {
+    margin: 80px auto;
+    width: 700px;
+    padding: 30px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 25px #ff00d4;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* SMALL INFO CARDS */
+.info-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.info-box {
+    width: 180px;
+    padding: 15px;
+    background: rgba(255, 0, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 0 12px #ff00ff;
+    color: #ffb7ff;
+    font-size: 14px;
+    animation: popUp 1s ease;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* BUTTON */
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    background: #ff00ff;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff8bff;
+    transform: scale(1.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Credit Card Approval Prediction</h1>
+    <p>This project predicts whether a user gets credit card approval using Machine Learning.</p>
+
+    <!-- INFO BOXES -->
+    <div class="info-container">
+        <div class="info-box">
+            <b>Role</b><br>
+            Helps banks check user eligibility based on key financial factors.
+        </div>
+
+        <div class="info-box">
+            <b>Benefits</b><br>
+            Fast, accurate automatic approval prediction using ML.
+        </div>
+
+        <div class="info-box">
+            <b>Why Needed?</b><br>
+            Reduces manual work and speeds up credit card decision-making.
+        </div>
+    </div>
+
+    <div class="info-container">
+        <div class="info-box">
+            <b>Project Feature</b><br>
+            Graph-based output for user's financial values.
+        </div>
+
+        <div class="info-box">
+            <b>Real Use</b><br>
+            Used in banks, fintech apps & loan portals.
+        </div>
+
+        <div class="info-box">
+            <b>Accuracy</b><br>
+            ML model trained on real financial datasets.
+        </div>
+    </div>
+
+    <a href="/form">
+        <button>Get Started</button>
+    </a>
+</div>
+
+</body>
+</html>

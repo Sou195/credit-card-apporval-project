@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        /* 🌈 Animated Moving Background */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff00ff, #000, #5500ff, #000);
+            background-size: 400% 400%;
+            animation: moveBG 10s infinite linear;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        @keyframes moveBG {
+            0% { background-position: 0 0; }
+            50% { background-position: 200% 200%; }
+            100% { background-position: 0 0; }
+        }
+
+        /* DECISION BOX */
+        .result-box {
+            background: rgba(0,0,0,0.8);
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px #ff00ff;
+            text-align: center;
+            animation: popUp 1s ease forwards;
+        }
+
+        @keyframes popUp {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #ff66ff;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px #ff00ff;
+        }
+
+        .decision {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ff00ff;
+            text-shadow: 0 0 25px #ff7bff;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #ff00ff; }
+            to { text-shadow: 0 0 35px #ff77ff; }
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 18px;
+            background: #ff00ff;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff77ff;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ff00ff;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="result-box">
+    <h1>Credit Card Approval Result</h1>
+    <div class="decision">{{ result }}</div>
+    <a href="/form"><button>Try Again</button></a>
+</div>
+
+</body>
+</html>

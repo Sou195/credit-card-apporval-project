@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: linear-gradient(120deg, #ff69b4, #0000ff);
+    background-size: 400% 400%;
+    animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.box {
+    width: 350px;
+    margin: 80px auto;
+    padding: 25px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}

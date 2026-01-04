@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Card Approval Form</title>
+
+    <style>
+
+        /* 🌈 Animated Moving Background */
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(45deg, #ff00ff, #000, #5500ff, #000);
+            background-size: 400% 400%;
+            animation: moveBG 10s infinite linear;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes moveBG {
+            0% { background-position: 0 0; }
+            50% { background-position: 200% 200%; }
+            100% { background-position: 0 0; }
+        }
+
+        /* FORM CONTAINER */
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: rgba(0,0,0,0.75);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px #ff00ea;
+            backdrop-filter: blur(5px);
+            animation: slideIn 1s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff00d4;
+            margin-bottom: 20px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ff00ff; }
+            to { text-shadow: 0 0 25px #ff7bff; }
+        }
+
+        /* INPUT STYLING */
+        label {
+            font-size: 16px;
+            color: #ffbaff;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            background: #1a001a;
+            border: none;
+            border-radius: 10px;
+            color: #ff94ff;
+            font-size: 15px;
+            outline: none;
+            transition: 0.3s;
+            box-shadow: 0 0 10px transparent;
+        }
+
+        input:focus, select:focus {
+            box-shadow: 0 0 18px #ff00ff;
+            transform: scale(1.02);
+        }
+
+        /* BUTTON */
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            background: #ff00ff;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff77ff;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ff00ff;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Credit Card Approval Prediction</h1>
+
+        <form action="/predict" method="post">
+
+            <label>Age</label>
+            <input type="number" name="age" required>
+
+            <label>Annual Income</label>
+            <input type="number" name="income" required>
+
+            <label>Employment Length (Years)</label>
+            <input type="number" name="employment" required>
+
+            <label>Credit Score</label>
+            <input type="number" name="credit_score" required>
+
+            <label>Existing Debts</label>
+            <input type="number" name="debts" required>
+
+            <label>Loan Amount</label>
+            <input type="number" name="loan_amount" required>
+
+            <label>Marital Status</label>
+            <select name="marital_status" required>
+                <option value="">Select</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+            </select>
+
+            <label>Education Level</label>
+            <select name="education" required>
+                <option value="">Select</option>
+                <option value="school">School</option>
+                <option value="ug">UG</option>
+                <option value="pg">PG</option>
+                <option value="phd">PhD</option>
+            </select>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+</body>
+</html>
